@@ -1,0 +1,50 @@
+**Добавить новый счёт
+POST localhost:8080/api/rest/bill/add
+
+{
+    "id": 202,
+    "uid": 202,
+    "clientid2": 5,
+    "total": "3999.00"
+}
+--------------------------------------------
+
+**Добавить новую транзакцию
+POST localhost:8080/api/rest/transaction/add
+
+{
+    "id": 3,
+    "frombill2": 1,
+    "tobill2": 5,
+    "sum": 150.00, 
+    "description": "desc"
+}
+---------------------------------------------
+
+**Данные клиента по его счёту
+GET localhost:8080/api/rest/bill/byClient
+
+id 7
+---------------------------------------------
+
+**Список всех клиентов
+POST localhost:8080/api/rest/client/list
+----------------------------------------------
+
+**Добавить нового клиента
+POST localhost:8080/api/rest/client/add
+
+{
+    "id": 222,
+    "uid": 202,
+    "name": "new name3",
+    "address": "new address3",
+    "age": 33
+}
+----------------------------------------------
+
+**Транзакции, совершенные клиентом
+GET localhost:8080/api/rest/transaction/byClient
+
+id 1
+
